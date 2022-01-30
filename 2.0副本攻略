@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="118861e6-88b9-4265-b8f5-c8a626414b52" Name="2.0副本攻略" Enabled="true">
+    <Folders>
+      <Folder Id="a0f67ac5-c990-4737-9c03-d2e10a2bb5e2" Name="讨伐歼灭战" Enabled="true">
+        <Folders>
+          <Folder ZoneFilterEnabled="True" Id="c4eecc26-67c7-456e-9c1e-626ab1ac71bd" ZoneFilterRegularExpression="迦楼罗歼殛战" Name="迦楼罗歼殛战" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="极风神攻略宏" Id="b659f7c1-ca05-47a8-9029-7b208f8e562a" RegularExpression="^.{14} 00:0839:“迦楼罗歼殛战”任务开始。$">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/p =========花枫的导随助手=========&#xD;&#xA;· 当前副本：迦楼罗歼殛战&#xD;&#xA;· 攻略来源：灰机Wiki，小怪阶段采用三分法&#xD;&#xA;· 站位一览：无，请灵性分散&#xD;&#xA;----------------------时间轴---------------------&#xD;&#xA;开场：请MT拉BOSS背对人群&#xD;&#xA;上天1：请前往石柱背后躲避寒风之啸，判定后再走出石柱&#xD;&#xA;召唤分身：请MT拉【迦楼罗】，ST拉【美翼】，DPS拉【妙翅】并远离石柱。击杀顺序为【妙翅】→【美翼】→【迦楼罗】&#xD;&#xA;召唤羽毛1：优先击杀【柔羽】，再请在绿色光球爆炸前击杀绿色光球&#xD;&#xA;上天2：请前往石柱背后躲避大气爆发，石柱数量或完整度不够会导致团灭&#xD;&#xA;召唤羽毛2：请先攻击除了【刺羽】以外的羽毛，在BOSS第三次上天时击杀【刺羽】，生成防护罩躲避落地AOE" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/p ------------------重要机制说明------------------&#xD;&#xA;· BOSS技能：&#xD;&#xA;螺旋气流：正面无范围提示读条技能，附带眩晕debuff，请躲开正面回避&#xD;&#xA;邪轮旋风：顺发钢铁（BOSS周围圆形AOE），请远离BOSS回避&#xD;&#xA;· 羽毛技能：&#xD;&#xA;柔羽：释放全屏睡眠的技能，请及时击杀&#xD;&#xA;妙翅：点名一人定身并释放需要分摊的AOE&#xD;&#xA;刺羽：对当前仇恨目标叠加低气压debuff，叠到3层时换T。" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="d281ef9d-1d1a-49ef-9423-2dd83031616d" Name="团队任务" Enabled="true">
+        <Folders>
+          <Folder Id="e7371da0-e098-48de-ba9c-2ff54df17540" Name="水晶塔 古代人迷宫" Enabled="false">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="古代人迷宫攻略宏" Id="5a189b14-db63-42c3-9ed0-411cfd54f21b" RegularExpression="^.{14} 00:0839:“水晶塔 古代人迷宫”任务开始。$">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/a =========花枫的导随助手=========&#xD;&#xA;· 当前副本：水晶塔 古代人迷宫&#xD;&#xA;· 攻略来源：灰机Wiki&#xD;&#xA;----------------------骸骨龙---------------------&#xD;&#xA;开场：请MT拉BOSS背对人群&#xD;&#xA;召唤小怪：请尽可能拉到场地边缘，远离BOSS后击杀&#xD;&#xA;BOSS复活：集中火力击杀小怪和BOSS，一旦小怪接触BOSS后释放全屏AOE，请注意治疗&#xD;&#xA;---------------------阿托莫斯--------------------&#xD;&#xA;请注意自己所属的小队，从左至右依次为A、B、C队，每队选出四名队员踩在有颜色的地板上，其余四人对BOSS及小怪进行输出&#xD;&#xA;---------------------塔纳托斯--------------------&#xD;&#xA;请具有Debuff（灵魂分离）的人攻击BOSS，其余清理场上的小怪&#xD;&#xA;同时优先击杀攻击魔法壶的小怪，魔法壶可以被治疗，请确保其存活" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/a --------------------贝希摩斯王-------------------&#xD;&#xA;在场地四周有四个电塔，需要周期性将其关闭，否则全场会有越来越高的AOE伤害&#xD;&#xA;若头上出现绿色标记，请找中场附近远离小怪的地方放陨石&#xD;&#xA;当BOSS读条黄道陨石时，请躲到陨石后规避伤害，并且请小怪当前第一仇恨的人不要将面向对向人群和陨石&#xD;&#xA;-----------------------提坦----------------------&#xD;&#xA;请注意自己所属的小队，从左至右依次为A、B、C队&#xD;&#xA;开场：请MT把BOSS拉到中场靠前位置，方便其他人跑位&#xD;&#xA;BOSS读条普通技能：地上有范围提示，躲避即可&#xD;&#xA;小怪出现：集火小怪解救被困的人&#xD;&#xA;BOSS读条远古核爆：前往自己所在小队的位置集合开启防御罩，并且击杀小怪" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="ae0245dd-ac59-4209-9ed4-e61e2bb80a9e" Name="迷宫挑战" Enabled="true">
+        <Folders />
+        <Triggers />
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Name="重置" Id="159ee55b-6d91-4339-b824-be2bfad030e5" RegularExpression="21:(.*):40000010|\“.*\”任务结束了\。">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="EndEncounter">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelAllTrigger" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>

@@ -7,8 +7,9 @@
         <Triggers>
           <Trigger Enabled="true" Sequential="True" Name="DebugSend" Id="b95578b7-6332-47aa-83a4-90e0add7211c" RegularExpression="^.{14} 00:0038:发宏 (.+)$">
             <Actions>
-              <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[$1][1]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+              <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${tvarrl:ExtremeMacroText[$1][2]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
@@ -19,11 +20,9 @@
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" TableVariableName="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="TableVariable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
-              <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="D:\Download\副本攻略宏.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="1000" Asynchronous="False">
+              <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="D:\Download\Tools\github\FFXIV-Mentor-Duty-Roulette-Helper-main\Triggernometry\Tutorial-Marcos.csv" DiskFileOpVar="ExtremeMacroText" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile" ExecutionDelayExpression="1000" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -34,8 +33,9 @@
     <Triggers>
       <Trigger Enabled="true" Name="Read" Id="c918b0fd-f219-4b40-bd47-6a5d68e6bffe" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000">
         <Actions>
-          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.jsdelivr.net/gh/Souma-Sumire/FFXIV_Auxiliary_Tools@master/Triggernometry%E8%A7%A6%E5%8F%91%E5%99%A8/%E5%89%AF%E6%9C%AC%E5%8F%91%E5%AE%8F%EF%BC%88%E5%8F%91%E6%94%BB%E7%95%A5%EF%BC%89%E5%B7%A5%E5%85%B7/%E5%AE%8F.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
+          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.staticaly.com/gh/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper@main/Triggernometry/Tutorial-Marcos.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
@@ -44,26 +44,29 @@
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Send (Echo)" Id="fc1a5216-3bad-4ac6-8929-1c91a200ff8e" RegularExpression="^.{14} 00:0038:Send Marcos To Echo$">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e =========导随助手 By 花枫@白银乡=========&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
-          <Action OrderNumber="2" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][3]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
         </Actions>
-        <Condition Enabled="true" Grouping="Or">
+        <Condition Enabled="true" Grouping="And">
           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="格里达尼亚|拉诺西亚|利姆萨·罗敏萨|黑衣森林|萨纳兰|乌尔达哈现世回廊|薰衣草苗圃|海雾村|狼狱停船场|高脚孤丘|金蝶游乐场|白银乡|库尔札斯|摩杜纳|龙堡|翻云雾海|阿巴拉提亚云海|魔大陆阿济兹拉|基拉巴尼亚|田园郡|神拳痕|黄金港|红玉海|延夏|太阳神草原|雷克兰德|伊尔美格|珂露西亚|安穆·艾兰|拉凯提卡大森林|黑风海|游末绑|水晶都" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+          <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
         </Condition>
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Send (Error)" Id="14a149c4-80e0-45e9-824f-6cc5c405ee65" RegularExpression="^.{14} 00:0038:Send Marcos To .*?$">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 请进本后使用！ &lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
@@ -74,25 +77,28 @@
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="c918b0fd-f219-4b40-bd47-6a5d68e6bffe" TriggerForce="true" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 攻略宏下载成功 &lt;se.2&gt;" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="None" IsReadme="True" Name="Instruction" Id="9a6eab83-db6b-4b88-992c-b4485d9efc6d" RegularExpression="" Description="使用说明：&#xD;&#xA;&#xD;&#xA;使用远程触发器导入时，请勾选“允许触发器操作文件”，并手动右键更新一次触发器，否则将无法使用。&#xD;&#xA;&#xD;&#xA;1.开启依赖：[鲶鱼精邮差]v1.2+&#xD;&#xA;&#xD;&#xA;2.使用宏 &quot;/e 发宏&quot;&#xD;&#xA;&#xD;&#xA;使用上面的宏，会将当前所在副本的对应喊话到默语频道(仅自己可见)。&#xD;&#xA;如3秒内连打2次宏，则发送到小队频道。&#xD;&#xA;&#xD;&#xA;3.如果任何副本都没有宏，则使用宏 &quot;/e 下载宏&quot;，进行重新下载尝试。">
+      <Trigger Enabled="true" Source="None" IsReadme="True" Name="Instruction" Id="9a6eab83-db6b-4b88-992c-b4485d9efc6d" RegularExpression="" Description="本仓库地址为：https://github.com/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper&#xD;&#xA;&#xD;&#xA;使用说明：&#xD;&#xA;&#xD;&#xA;0.使用远程触发器导入时，请勾选“允许触发器操作文件”，并手动右键更新一次触发器，否则将无法使用。&#xD;&#xA;&#xD;&#xA;1.开启依赖：[鲶鱼精邮差] v1.2+ （https://github.com/Natsukage/PostNamazu）&#xD;&#xA;&#xD;&#xA;2.指令一览：&#xD;&#xA;/e Send Marcos To Echo  发送宏至默语频道（只有自己能看到）&#xD;&#xA;/e Send Marcos To Party 发送宏至队伍频道（团队任务会发送到团队频道）&#xD;&#xA;/e Download Macros      下载攻略宏，如果所有副本都不显示请使用该指令&#xD;&#xA;&#xD;&#xA;3.参考：&#xD;&#xA;Souma大佬的副本发宏工具：https://github.com/Souma-Sumire/FFXIV_Auxiliary_Tools&#xD;&#xA;副本攻略来源于[灰机Wiki]（https://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5）、[素素攻略站]（https://www.ffxiv.cn/v2/）、[Bilibili]（https://www.bilibili.com/）">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Send (Party)" Id="b7e0b07d-04e0-4483-809e-52ec6d8c6823" RegularExpression="^.{14} 00:0038:Send Marcos To Party$">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/p ${ptvarrl:ExtremeMacroText[${_zone}][1]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]}&#xD;&#xA;=========导随助手 By 花枫@白银乡=========&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" JsonCacheRequest="True" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 未组队状态下无法发送小队消息。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][3]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" JsonCacheRequest="True" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 未组队状态下无法发送小队消息。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionGroup Enabled="true" Grouping="Not">
@@ -100,14 +106,15 @@
               </ConditionGroup>
             </Condition>
           </Action>
-          <Action OrderNumber="3" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+          <Action OrderNumber="4" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
           </Action>
         </Actions>
-        <Condition Enabled="true" Grouping="Or">
+        <Condition Enabled="true" Grouping="And">
           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="格里达尼亚|拉诺西亚|利姆萨·罗敏萨|黑衣森林|萨纳兰|乌尔达哈现世回廊|薰衣草苗圃|海雾村|狼狱停船场|高脚孤丘|金蝶游乐场|白银乡|库尔札斯|摩杜纳|龙堡|翻云雾海|阿巴拉提亚云海|魔大陆阿济兹拉|基拉巴尼亚|田园郡|神拳痕|黄金港|红玉海|延夏|太阳神草原|雷克兰德|伊尔美格|珂露西亚|安穆·艾兰|拉凯提卡大森林|黑风海|游末绑|水晶都" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+          <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
         </Condition>
       </Trigger>
     </Triggers>

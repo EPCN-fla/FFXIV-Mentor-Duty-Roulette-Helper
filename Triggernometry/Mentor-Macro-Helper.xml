@@ -32,7 +32,7 @@
     <Triggers>
       <Trigger Enabled="true" Name="Read" Id="c918b0fd-f219-4b40-bd47-6a5d68e6bffe" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000">
         <Actions>
-          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.staticaly.com/gh/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper@main/Triggernometry/Tutorial-Marco.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
+          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.staticaly.com/gh/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper@main/Triggernometry/Tutorial-Marco-2121.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Action>

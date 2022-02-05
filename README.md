@@ -1,5 +1,5 @@
-# FFXIV-Mentor-Duty-Roulette-Helper
-A helper for mentor duty roulette in FFXIV.
+# FFXIV-Mentor-Helper
+A helper for mentors in FFXIV.
 
 Reference: [Souma's FFXIV_Auxiliary_Tools](https://github.com/Souma-Sumire/FFXIV_Auxiliary_Tools)
 

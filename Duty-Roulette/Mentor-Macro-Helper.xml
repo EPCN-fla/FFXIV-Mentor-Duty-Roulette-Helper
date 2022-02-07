@@ -32,9 +32,8 @@
     <Triggers>
       <Trigger Enabled="true" Name="Read" Id="c918b0fd-f219-4b40-bd47-6a5d68e6bffe" RegularExpression="^." PeriodRefire="Deny" RefirePeriodExpression="86400000">
         <Actions>
-          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.staticaly.com/gh/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper@main/Triggernometry/Tutorial-Marco-2121.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
+          <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="https://cdn.staticaly.com/gh/EPCN-fla/FFXIV-Mentor-Helper/main/Duty-Roulette/Tutorial-Marco-2121.csv" DiskFileOpVar="ExtremeMacroText" DiskPersist="True" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiskFile">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
@@ -45,43 +44,36 @@
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ======================================&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][3]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][4]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][5]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][6]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e ${ptvarrl:ExtremeMacroText[${_zone}][7]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="7" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="And">
@@ -110,7 +102,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="None" IsReadme="True" Name="Instruction" Id="9a6eab83-db6b-4b88-992c-b4485d9efc6d" RegularExpression="" Description="本仓库地址为：https://github.com/EPCN-fla/FFXIV-Mentor-Duty-Roulette-Helper&#xD;&#xA;&#xD;&#xA;使用说明：&#xD;&#xA;&#xD;&#xA;0.使用远程触发器导入时，请勾选“允许触发器操作文件”，并手动右键更新一次触发器，否则将无法使用。&#xD;&#xA;&#xD;&#xA;1.开启依赖：[鲶鱼精邮差] v1.2+ （https://github.com/Natsukage/PostNamazu）&#xD;&#xA;&#xD;&#xA;2.指令一览：&#xD;&#xA;/e Send Marcos To Echo  发送宏至默语频道（只有自己能看到）&#xD;&#xA;/e Send Marcos To Party 发送宏至队伍频道（团队任务会发送到团队频道）&#xD;&#xA;/e Download Macros      下载攻略宏，如果所有副本都不显示请使用该指令&#xD;&#xA;&#xD;&#xA;3.参考：&#xD;&#xA;Souma大佬的副本发宏工具：https://github.com/Souma-Sumire/FFXIV_Auxiliary_Tools&#xD;&#xA;副本攻略来源于[灰机Wiki]（https://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5）、[素素攻略站]（https://www.ffxiv.cn/v2/）、[Bilibili]（https://www.bilibili.com/）">
+      <Trigger Enabled="true" Source="None" IsReadme="True" Name="Instruction" Id="9a6eab83-db6b-4b88-992c-b4485d9efc6d" RegularExpression="" Description="本仓库地址为：https://github.com/EPCN-fla/FFXIV-Mentor-Helper&#xD;&#xA;&#xD;&#xA;使用说明：&#xD;&#xA;&#xD;&#xA;0.使用远程触发器导入时，请勾选“允许触发器操作文件”，并手动右键更新一次触发器，否则将无法使用。&#xD;&#xA;&#xD;&#xA;1.下载并开启依赖：[鲶鱼精邮差] v1.2+ （https://github.com/Natsukage/PostNamazu）&#xD;&#xA;&#xD;&#xA;2.指令一览：&#xD;&#xA;/e Send Marcos To Echo  发送宏至默语频道（只有自己能看到）&#xD;&#xA;/e Send Marcos To Party 发送宏至队伍频道（团队任务会发送到团队频道）&#xD;&#xA;/e Download Macros      下载攻略宏，如果所有副本都不显示请使用该指令&#xD;&#xA;&#xD;&#xA;3.参考：&#xD;&#xA;Souma大佬的副本发宏工具：https://github.com/Souma-Sumire/FFXIV_Auxiliary_Tools&#xD;&#xA;副本攻略来源于[灰机Wiki]（https://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5）、[素素攻略站]（https://www.ffxiv.cn/v2/）、[Bilibili]（https://www.bilibili.com/）">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
@@ -118,37 +110,31 @@
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]}&#xD;&#xA;======================================&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][3]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][4]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][5]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][6]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][7]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvar:ExtremeMacroText.width}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="7" JsonCacheRequest="True" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 未组队状态下无法发送小队消息。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="true" Grouping="And">
@@ -157,13 +143,11 @@
                 <ConditionSingle Enabled="true" ExpressionL="${ptvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="8" NamedCallbackName="DoTextCommand" NamedCallbackParam="/e 找不到对应的副本宏，请检查你的网络或者等待作者更新。&lt;se.11&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${ptvarrl:ExtremeMacroText[${_zone}][0]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="And">

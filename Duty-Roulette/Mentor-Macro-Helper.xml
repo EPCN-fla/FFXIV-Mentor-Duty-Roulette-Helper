@@ -108,7 +108,7 @@
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Send (Party)" Id="b7e0b07d-04e0-4483-809e-52ec6d8c6823" RegularExpression="^.{14} 00:0038:Send Marcos To Party$">
         <Actions>
-          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]}&#xD;&#xA;======================================&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
+          <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ======================================&#xD;&#xA;${ptvarrl:ExtremeMacroText[${_zone}][2]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="DoTextCommand" NamedCallbackParam="${ptvarrl:ExtremeMacroText[${_zone}][1]} ${ptvarrl:ExtremeMacroText[${_zone}][3]}" TextAuraFontSize="9.163636" TextAuraFontName="宋体" ActionType="NamedCallback">
